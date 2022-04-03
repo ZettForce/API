@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors({ origin: '*'}));
 
 //Routes
-
+app.use('/api/cars', require ('./routes/car_routes'));
 //Server
 app.listen(app.get('port'), () => {
     console.log('Servidor en puerto: ' + app.get('port'));
